@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        window.onload = function(){
+
+            let bt = document.getElementsByTagName("button");
+            
+            bt[3].onclick = function(){
+                alert('Direto');
+            }
+
+            bt[4].addEventListener("click", chama());
+        }
+
+        function chama(){
+            alert('event');
+        }
+            // função nomeada
+            function Francisco(){
+                alert("Função Nomeada");
+            }
+
+            //Construtor
+            let Fc = new Function('alert("Construtor")');
+
+            //arrow Function * estudar
+            let Flexa = () => {
+                alert("Flexa");
+            }
+
+
+    </script>
+</head>
+
+<body>
+    <button onclick="Francisco()"> Func. Nomeada</button>
+    <button onclick="Fc()"> Func. Construtor</button>
+    <button onmouseover="Flexa()"> Func. Flexa</button>
+    <button> Fuc. Direto </button>
+    <button> Fuc. AddEvent </button>
+</body>
+</html>
